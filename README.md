@@ -53,8 +53,10 @@
 
 **下载最新 docker镜像**
 
+> 支持 amd64、arm64、armhf、i386
+
 ```
-$ docker pull fffonion/xunlei-fastdick
+$ docker pull scjtqs/xunlei-fastdick
 ```
 
 群晖用户可以直接从`套件`->`Docker`->`注册表`中搜索`xunlei-fastdick`并下载；如果拉取失败，可以登录SSH后运行上述命令。
@@ -63,37 +65,21 @@ $ docker pull fffonion/xunlei-fastdick
 或者使用DaoCloud镜像
 
 ```
-$ docker pull daocloud.io/fffonion/xunlei-fastdick
+$ docker pull daocloud.io/scjtqs/xunlei-fastdick
 ```
 
 **指定环境变量作为启动参数**
 
 ```
-$ docker run -d --name=xunlei-fastdick --restart=unless-stopped -e XUNLEI_UID=<uid> -e XUNLEI_PASSWD=<uid> fffonion/xunlei-fastdick
+$ docker run -d --name=xunlei-fastdick --restart=unless-stopped -e XUNLEI_UID=<uid> -e XUNLEI_PASSWD=<uid> scjtqs/xunlei-fastdick
 ```
 
 如果上一步使用了DaoCloud镜像
 
 ```
-$ docker run -d --name=xunlei-fastdick --restart=unless-stopped -e XUNLEI_UID=<uid> -e XUNLEI_PASSWD=<uid> daocloud.io/fffonion/xunlei-fastdick
+$ docker run -d --name=xunlei-fastdick --restart=unless-stopped -e XUNLEI_UID=<uid> -e XUNLEI_PASSWD=<uid> daocloud.io/scjtqs/xunlei-fastdick
 ```
 
-## 编译基于arm32v7内核的镜像(例如运行在树莓派上)
-
-**编译**
-```
-$ docker build -f Dockerfile.arm32v7 -t yourname/xunlei-fastdick .
-```
-
-**运行**
-```
-$ docker run -d \
-    --name=xunlei-fastdick \
-    --restart=unless-stopped \
-    -e XUNLEI_UID=<uid> \
-    -e XUNLEI_PASSWD=<uid> \ 
-    yourname/xunlei-fastdick
-```
 
 # 说明
 * 生成的`swjsq_wget.sh`和`swjsq_0.0.1_all.ipk`包含了账户信息，请不要共享给他人使用
