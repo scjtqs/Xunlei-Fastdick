@@ -75,5 +75,5 @@ jobs:
 #        run: docker push $IMAGE_NAME
         
       - name: buildx
-        run: bash build.sh
+        run: ./build.sh
 
