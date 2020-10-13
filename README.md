@@ -62,10 +62,10 @@ $ docker pull scjtqs/xunlei-fastdick
 群晖用户可以直接从`套件`->`Docker`->`注册表`中搜索`xunlei-fastdick`并下载；如果拉取失败，可以登录SSH后运行上述命令。
 
 
-或者使用DaoCloud镜像
+或者使用aliyun镜像
 
 ```
-$ docker pull daocloud.io/scjtqs/xunlei-fastdick
+$ docker pull registry.cn-hangzhou.aliyuncs.com/scjtqs/xunlei-fastdick
 ```
 
 **指定环境变量作为启动参数**
@@ -74,10 +74,10 @@ $ docker pull daocloud.io/scjtqs/xunlei-fastdick
 $ docker run -d --name=xunlei-fastdick --restart=unless-stopped -e XUNLEI_UID=<uid> -e XUNLEI_PASSWD=<uid> scjtqs/xunlei-fastdick
 ```
 
-如果上一步使用了DaoCloud镜像
+如果上一步使用了aliyun镜像
 
 ```
-$ docker run -d --name=xunlei-fastdick --restart=unless-stopped -e XUNLEI_UID=<uid> -e XUNLEI_PASSWD=<uid> daocloud.io/scjtqs/xunlei-fastdick
+$ docker run -d --name=xunlei-fastdick --restart=unless-stopped -e XUNLEI_UID=<uid> -e XUNLEI_PASSWD=<uid> registry.cn-hangzhou.aliyuncs.com/scjtqs/xunlei-fastdick
 ```
 
 
