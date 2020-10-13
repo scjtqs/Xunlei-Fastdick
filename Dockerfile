@@ -9,4 +9,4 @@ FROM python:2.7-alpine
 
 COPY --from=builder  /xunlei/swjsq.py /
 
-ENTRYPOINT ["python", "/swjsq.py"]
+ENTRYPOINT ["python", "-u", "/swjsq.py"]
