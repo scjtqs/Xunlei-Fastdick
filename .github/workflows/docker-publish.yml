@@ -58,6 +58,9 @@ jobs:
 
     runs-on: ubuntu-latest
 #    if: github.event_name == 'push'
+      with:
+        repository: 'scjtqs/Xunlei-Fastdick'
+        ref: 'master'
 
     steps:
       - uses: actions/checkout@v2
