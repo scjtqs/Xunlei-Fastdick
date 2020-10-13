@@ -42,3 +42,4 @@ swjcq_account.txt
 *.sh
 *.ipk
 .idea
+!build.sh
